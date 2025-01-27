@@ -9,8 +9,8 @@ env: .env/.up-to-date
 
 
 .env/.up-to-date: setup.py Makefile requirements.txt setup.cfg
-	python3 -m virtualenv .env
-	.env/bin/python -m pip install -U pip virtualenv
+	python3 -m venv .env
+	.env/bin/python -m pip install -U pip
 	.env/bin/python -m pip install -e '.[testing,doc]'
 	touch $@
 

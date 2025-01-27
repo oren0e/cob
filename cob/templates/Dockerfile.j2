@@ -16,8 +16,8 @@ RUN apt-get update
 RUN apt-get -y install build-essential rsync software-properties-common libpq-dev nginx curl redis-server gcc libsasl2-dev libldap2-dev git sudo wget
 
 RUN wget -O - http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
-RUN echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" | tee -a /etc/apt/sources.list
-RUN echo "deb-src http://nginx.org/packages/mainline/debian/ jessie nginx" | tee -a /etc/apt/sources.list
+RUN echo "deb http://nginx.org/packages/mainline/debian/ bullseye nginx" | tee -a /etc/apt/sources.list
+RUN echo "deb-src http://nginx.org/packages/mainline/debian/ bullseye nginx" | tee -a /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y nginx
 

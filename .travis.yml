@@ -1,7 +1,7 @@
 language: python
 sudo: required
 python:
-- '3.6'
+- '3.9'
 
 services:
   - docker
@@ -38,7 +38,7 @@ jobs:
   - script: WORKER=3 python scripts/run_parallel_pytest_slice.py
   - script: WORKER=4 python scripts/run_parallel_pytest_slice.py
   - stage: deploy
-    python: 3.6
+    python: 3.9
     before_install: echo "No before install"
     install: pip install twine
     script:

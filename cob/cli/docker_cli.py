@@ -62,8 +62,8 @@ def generate_dockerfile():
     with open(".Dockerfile", "w") as f:
         f.write(template.render(
             project=proj,
-            deployment_base_image='python:3.6-jessie',
-            python_version='3.6',
+            deployment_base_image='3.9.14-bullseye',
+            python_version='3.9',
             specific_vers=_specific_vers,
             is_develop=is_develop(),
             cob_sdist_filename=os.path.basename(sdist_file_name) if sdist_file_name else None,
